@@ -8,7 +8,14 @@
             Start Analyzing your Resume and Job Descriptions with AI
         </p>
         <form method="POST">
-        
+            <input type="email" name="email" placeholder="Enter your Email" required>
+            <input type="password" name="password" placeholder="Enter your Password" required>   
+            <p class="sub-text">Use at least 8 characters with a mix of letters, numbers, and symbols</p> 
+            <button type="submit">Sign Up</button>   
         </form> 
+        <p class="switch-auth">
+            Already have an account? <a href="/login">Login</a>
+        </p>
     </div>
 </div>
+{% endblock %}
