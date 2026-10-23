@@ -9,6 +9,9 @@
     <form method="POST" enctype="multipart/form-data">
         <textarea name="resume" placeholder="Paste your resume(optional)"></textarea>
         <p>OR upload file:</p>
-
+        <input type="file" name="file">
+        <input name="role" placeholder="What do you want to become?" (e.g Backend Developer, Data Scientist, etc.)required>
+        <button type="submit">Analyze</button> 
+    </form>
 </div>
 {% endblock %}
