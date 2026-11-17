@@ -13,8 +13,12 @@
         <input name="role" placeholder="What do you want to become?" (e.g Backend Developer, Data Scientist, etc.)required>
         <button type="submit">Analyze</button> 
     </form>
-</div>
+
+</div> 
 
 {% if result %}
+<div class="red">
+    {% if result.error %}
+    <p style="color: red;">Error: {{result.error}}</p>
 
 {% endblock %}
