@@ -19,6 +19,15 @@
 {% if result %}
 <div class="red">
     {% if result.error %}
-    <p style="color: red;">Error: {{result.error}}</p>
+    <p style="color: red;">Error: {{result.error}}</p> 
+    {% endif %}
 
+    <h3>Skills</h3>
+    <ul>
+        {% for s in result.get("skills", []) %}
+        <li>{{ s }}</li>
+        {% endfor %}
+    </ul>
+
+</div>
 {% endblock %}
