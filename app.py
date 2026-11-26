@@ -10,9 +10,12 @@ app.secret_key = "secret001"
 
 Base.metadata.create_all(bind=engine)
 
+#HOME
 @app.route("/")
 def home():
-    return "App is running!"
-
+    if "user" in session:
+        return redirect("/dashboard")
+    return redirect("/login")
+    
 if __name__ == "__main__":
     app.run(debug=True)
