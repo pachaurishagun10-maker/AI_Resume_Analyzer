@@ -6,9 +6,12 @@ import docx
 import json
 
 app = Flask(__name__)
+app.secret_key = "secret001"
+
+Base.metadata.create_all(bind=engine)
 
 @app.route("/")
-def home(): 
+def home():
     return "App is running!"
 
 if __name__ == "__main__":
