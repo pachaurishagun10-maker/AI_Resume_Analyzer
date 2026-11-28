@@ -23,6 +23,7 @@ def signup():
     db = SessionLocal()
 
     if request.method == "POST":
-        email = request.form.get("email")
+        email = request.form.get("email") 
+        password = request.form.get("password")
 if __name__ == "__main__":
     app.run(debug=True)
